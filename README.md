@@ -19,11 +19,4 @@
    - "InkWell": berfungsi memberikan respons saat tombol ditekan.
    - "Icon": berfungsi untuk menampilkan ikon.
    - "SnackBar": berfungsi untuk menampilkan pesan saat tombol ditekan pengguna.
-3. * Membuat aplikasi flutter bernama "jastipin_aja" dengan menjalankan flutter create "jastipin_aja" pada cmd
-   * Membuat kelas MyApp yang mengatur aplikasi utama pada file main.dart
-   * Mengatur widget pada aplikasi utama seperti colorScheme
-   * Membuat file menu.dart dan kelas MyHomePage yang mengatur tampilan homepage
-   * Membuat kelas ShopItem yang mengatur objek tombol pada homepage
-   * Membuat kelas ShopCard (stateless widget) yang mengatur tampilan tombol
-   * Membuat 3 tombol yaitu tombol "Lihat Item", "Tambah Item", dan "Logout"
-   * Mengatur warna 3 tombol tersebut dengan warna yang berbeda-beda
+3. halo
