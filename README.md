@@ -75,7 +75,8 @@
          ],
       )
       ```
-
+3. Elemen input form yang saya pakai hanya `TextFormField()` karena data yang saya butuhkan hanya barupa input teks atau angka.
+4. 
 # Tugas 7
 1. Stateless widget berarti semua konfigurasi yang ada sudah diinisiasi di awal, sedangkan Stateful widget bersifat dinamis yang berarti widget dapat diganti atau diperbaharui kapan pun berdasarkan aksi atau saat terjadi perubahan data.
 2. - "MyApp": widget yang berfungsi sebagai widget utama aplikasi
