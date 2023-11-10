@@ -1,15 +1,28 @@
 # Tugas 8
-1. Navogator.push() akan **menambahkan** route baru ke dalam route stack yang dikelola oleh Navigator, sedangkan Navigator.pushReplacement() akan **mengganti** route teratas pada route stack dengan route terbaru yang mau di-push ke stack tanpa mengubah kondisi elemen yang ada di bawahnya.
-   Contoh penerapan Navogator.push() pada tugas sekarang ada pada `shop_card.dart` di mana ketika user menekan tombol "Tambah Item", route ShopFormPage() akan ditambahkan di atas stack dan menampilkan route ShopFormPage() dan dapat menekan tombol Back agar kembali ke halaman menu. Berikut potongan kodenya:
+1. `Navogator.push()` akan **menambahkan** route baru ke dalam route stack yang dikelola oleh Navigator, sedangkan `Navigator.pushReplacement()` akan **mengganti** route teratas pada route stack dengan route terbaru yang mau di-push ke stack tanpa mengubah kondisi elemen yang ada di bawahnya.
+   Contoh penerapan `Navogator.push()` pada tugas sekarang ada pada `shop_card.dart` di mana ketika user menekan tombol "Tambah Item", route `ShopFormPage()` akan ditambahkan di atas stack dan menampilkan route `ShopFormPage()` dan dapat menekan tombol Back agar kembali ke halaman menu. Berikut potongan kodenya:
    ```dart
    if (item.name == "Tambah Item") {
       Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopFormPage()));
    }
    ```
-
-Contoh penerapan ```dartNavigator.pushReplacement()``` pada tugas sekarang ada pada `left_drawer.dart` di mana ketika user menekan tombol "Tambah Item", route teratas pada stack akan di-replace dengan ShopFormPage() sehingga route yang ditampilkan ke user adalah route ShopFormPage() dan user tidak dapat menekan tombol Back untuk kembali ke halaman menu secara langsung.
-3. dsa
-4. 
+   
+   Contoh penerapan `Navigator.pushReplacement()` pada tugas sekarang ada pada `left_drawer.dart` di mana ketika user menekan tombol "Tambah Item", route teratas pada stack akan di-replace dengan `ShopFormPage()` sehingga route yang ditampilkan ke user adalah route `ShopFormPage()`, tetapi user tidak dapat menekan tombol Back untuk kembali ke halaman menu secara langsung. Berikut potongan kodenya:
+   ```dart
+   ListTile(
+      leading: const Icon(Icons.add_shopping_cart),
+      title: const Text('Tambah Item'),
+      // Bagian redirection ke ShopFormPage
+      onTap: () {
+         Navigator.pushReplacement(
+         context,
+         MaterialPageRoute(
+            builder: (context) => const ShopFormPage(),
+         ));
+      },
+   ),
+   ```
+2.  
 
 # Tugas 7
 1. Stateless widget berarti semua konfigurasi yang ada sudah diinisiasi di awal, sedangkan Stateful widget bersifat dinamis yang berarti widget dapat diganti atau diperbaharui kapan pun berdasarkan aksi atau saat terjadi perubahan data.
