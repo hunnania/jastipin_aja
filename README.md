@@ -22,7 +22,59 @@
       },
    ),
    ```
-2.  
+2.  - Padding: mengatur seberapa jauh sebuah elemen dari tepi widget yang mengandungnya.
+      ```dart
+      child: Padding(
+         padding: const EdgeInsets.all(10.0), // Set padding dari halaman
+         child: Column(
+         ...
+         ),
+      ),
+      ```
+    - GridView: untuk menampilkan item dalam bentuk grid atau kotak.
+      ```dart
+      GridView.count(
+         // Container pada card kita.
+         primary: true,
+         padding: const EdgeInsets.all(20),
+         crossAxisSpacing: 10,
+         mainAxisSpacing: 10,
+         crossAxisCount: 3,
+         shrinkWrap: true,
+         children: items.map((ShopItem item) {
+            // Iterasi untuk setiap item
+            return ShopCard(item);
+         }).toList(),
+       ),
+      ```
+    - Row dan Column: Row digunakan untuk mengatur widget secara horizontal, sementara Column digunakan untuk mengatur widget secara vertikal.
+      ```dart
+      child: Column(
+         crossAxisAlignment: CrossAxisAlignment.start,
+         children: [
+         ...
+         ],
+      )
+      ```
+    - Align: untuk menempatkan widget dalam container sesuai dengan posisi yang diinginkan, seperti bagian atas, bawah, kiri, atau kanan.
+      ```dart
+      Align(
+         alignment: Alignment.bottomCenter,
+         child: Padding(
+         ...
+         ),
+      )
+      ```
+    - ListView: untuk menampilkan daftar item yang dapat di-scroll.
+      ```dart
+      child: ListView(
+         children: [
+            const DrawerHeader(
+            ...
+            ),
+         ],
+      )
+      ```
 
 # Tugas 7
 1. Stateless widget berarti semua konfigurasi yang ada sudah diinisiasi di awal, sedangkan Stateful widget bersifat dinamis yang berarti widget dapat diganti atau diperbaharui kapan pun berdasarkan aksi atau saat terjadi perubahan data.
