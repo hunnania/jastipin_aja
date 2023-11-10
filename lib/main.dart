@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jastipin_aja/menu.dart';
+import 'package:jastipin_aja/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
