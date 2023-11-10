@@ -3,11 +3,11 @@
    Contoh penerapan Navogator.push() pada tugas sekarang ada pada `shop_card.dart` di mana ketika user menekan tombol "Tambah Item", route ShopFormPage() akan ditambahkan di atas stack dan menampilkan route ShopFormPage() dan dapat menekan tombol Back agar kembali ke halaman menu. Berikut potongan kodenya:
    ```dart
    if (item.name == "Tambah Item") {
-         Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopFormPage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopFormPage()));
    }
    ```
 
-Contoh penerapan Navigator.pushReplacement() pada tugas sekarang ada pada `left_drawer.dart` di mana ketika user menekan tombol "Tambah Item", route teratas pada stack akan di-replace dengan ShopFormPage() sehingga route yang ditampilkan ke user adalah route ShopFormPage() dan user tidak dapat menekan tombol Back untuk kembali ke halaman menu secara langsung.
+Contoh penerapan ```dartNavigator.pushReplacement()``` pada tugas sekarang ada pada `left_drawer.dart` di mana ketika user menekan tombol "Tambah Item", route teratas pada stack akan di-replace dengan ShopFormPage() sehingga route yang ditampilkan ke user adalah route ShopFormPage() dan user tidak dapat menekan tombol Back untuk kembali ke halaman menu secara langsung.
 3. dsa
 4. 
 
