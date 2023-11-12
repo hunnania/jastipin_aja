@@ -1,6 +1,6 @@
-# Nama: Alifa Hanania Ardha
-# NPM: 2206024392
-# Kelas: PBP B
+Nama: Alifa Hanania Ardha
+NPM: 2206024392
+Kelas: PBP B
 
 # Tugas 8
 1. `Navogator.push()` akan **menambahkan** route baru ke dalam route stack yang dikelola oleh Navigator, sedangkan `Navigator.pushReplacement()` akan **mengganti** route teratas pada route stack dengan route terbaru yang mau di-push ke stack tanpa mengubah kondisi elemen yang ada di bawahnya.
