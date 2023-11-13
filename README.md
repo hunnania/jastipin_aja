@@ -80,7 +80,29 @@ Kelas: PBP B<br>
       )
       ```
 3. Elemen input form yang saya pakai hanya `TextFormField()` karena data yang saya butuhkan hanya barupa input teks atau angka.
-4. 
+4. Penerapan Clean Architecture pada aplikasi Flutter dapat membantu dalam mengorganisir kode kita dengan cara yang memisahkan logika bisnis dari detail implementasi dan infrastruktur. Clean Architecture memiliki beberapa lapisan utama, yaitu "Entity", "Use Case", "Interface Adapters", dan "Frameworks & Drivers".
+   Langkah-langkah menerapkan clean architecture:
+   - Tentukan entitas atau objek bisnis yang mewakili data atau model domain Anda.
+   - Implementasikan entitas ini sebagai plain Dart objects atau menggunakan kelas data (data class) di Flutter.
+   - Identifikasi use case atau fitur aplikasi yang mewakili tindakan tertentu dalam domain bisnis.
+   - Implementasikan use case ini sebagai kelas Dart yang terpisah, yang bertanggung jawab untuk logika bisnis dan berkomunikasi dengan entitas.
+   - Pisahkan antara logika bisnis (use case) dan detil implementasi seperti UI dan database.
+   - Buat kelas atau modul yang bertanggung jawab untuk mengonversi data dari format yang digunakan di dalam use case ke format yang sesuai untuk UI atau infrastruktur.
+   - Gunakan Presenter atau ViewModel untuk menghubungkan logika bisnis dengan tampilan (UI) di Flutter.
+   - Tempatkan seluruh kode yang berkaitan dengan kerangka kerja dan infrastruktur di lapisan framework & drivers.
+   - Implementasikan repository yang berkomunikasi dengan data sumber eksternal seperti database atau API.
+   - Gunakan widget Flutter dan fungsi framework untuk menghubungkan UI dengan presentasi.
+   - Gunakan teknik Dependency Injection untuk memasukkan dependensi ke dalam kelas-kelas kita. Di Flutter, kita bisa menggunakan package seperti get_it atau provider untuk mengelola dependensi.
+   - Pastikan setiap lapisan dapat diuji secara terpisah.
+   - Tulis unit test untuk setiap use case dan fungsi bisnis.
+   - Mock dependensi untuk mengisolasi setiap lapisan selama pengujian.
+5. - membuat left_drawer.dart yang berfungsi seperti navbar
+   - membuat shoplist_form.dart yang berisikan Class untuk membuat model saya.
+   - membuat form yang meminta input sesuai dengan model tersebut.
+   - membuat validasi pada input form
+   - membuat dialog window yang akan memunculkan apa yang sudah saya input
+   - mengatur semua navigasi buttonnya ke window yang dituju
+
 # Tugas 7
 1. Stateless widget berarti semua konfigurasi yang ada sudah diinisiasi di awal, sedangkan Stateful widget bersifat dinamis yang berarti widget dapat diganti atau diperbaharui kapan pun berdasarkan aksi atau saat terjadi perubahan data.
 2. - "MyApp": widget yang berfungsi sebagai widget utama aplikasi
