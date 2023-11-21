@@ -1,3 +1,108 @@
+Nama: Alifa Hanania Ardha<br>
+NPM: 2206024392<br>
+Kelas: PBP B<br>
+
+# Tugas 8
+1. `Navogator.push()` akan **menambahkan** route baru ke dalam route stack yang dikelola oleh Navigator, sedangkan `Navigator.pushReplacement()` akan **mengganti** route teratas pada route stack dengan route terbaru yang mau di-push ke stack tanpa mengubah kondisi elemen yang ada di bawahnya.
+   Contoh penerapan `Navogator.push()` pada tugas sekarang ada pada `shop_card.dart` di mana ketika user menekan tombol "Tambah Item", route `ShopFormPage()` akan ditambahkan di atas stack dan menampilkan route `ShopFormPage()` dan dapat menekan tombol Back agar kembali ke halaman menu. Berikut potongan kodenya:
+   ```dart
+   if (item.name == "Tambah Item") {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopFormPage()));
+   }
+   ```
+   
+   Contoh penerapan `Navigator.pushReplacement()` pada tugas sekarang ada pada `left_drawer.dart` di mana ketika user menekan tombol "Tambah Item", route teratas pada stack akan di-replace dengan `ShopFormPage()` sehingga route yang ditampilkan ke user adalah route `ShopFormPage()`, tetapi user tidak dapat menekan tombol Back untuk kembali ke halaman menu secara langsung. Berikut potongan kodenya:
+   ```dart
+   ListTile(
+      leading: const Icon(Icons.add_shopping_cart),
+      title: const Text('Tambah Item'),
+      // Bagian redirection ke ShopFormPage
+      onTap: () {
+         Navigator.pushReplacement(
+         context,
+         MaterialPageRoute(
+            builder: (context) => const ShopFormPage(),
+         ));
+      },
+   ),
+   ```
+2.  - Padding: mengatur seberapa jauh sebuah elemen dari tepi widget yang mengandungnya.
+      ```dart
+      child: Padding(
+         padding: const EdgeInsets.all(10.0), // Set padding dari halaman
+         child: Column(
+         ...
+         ),
+      ),
+      ```
+    - GridView: untuk menampilkan item dalam bentuk grid atau kotak.
+      ```dart
+      GridView.count(
+         // Container pada card kita.
+         primary: true,
+         padding: const EdgeInsets.all(20),
+         crossAxisSpacing: 10,
+         mainAxisSpacing: 10,
+         crossAxisCount: 3,
+         shrinkWrap: true,
+         children: items.map((ShopItem item) {
+            // Iterasi untuk setiap item
+            return ShopCard(item);
+         }).toList(),
+       ),
+      ```
+    - Row dan Column: Row digunakan untuk mengatur widget secara horizontal, sementara Column digunakan untuk mengatur widget secara vertikal.
+      ```dart
+      child: Column(
+         crossAxisAlignment: CrossAxisAlignment.start,
+         children: [
+         ...
+         ],
+      )
+      ```
+    - Align: untuk menempatkan widget dalam container sesuai dengan posisi yang diinginkan, seperti bagian atas, bawah, kiri, atau kanan.
+      ```dart
+      Align(
+         alignment: Alignment.bottomCenter,
+         child: Padding(
+         ...
+         ),
+      )
+      ```
+    - ListView: untuk menampilkan daftar item yang dapat di-scroll.
+      ```dart
+      child: ListView(
+         children: [
+            const DrawerHeader(
+            ...
+            ),
+         ],
+      )
+      ```
+3. Elemen input form yang saya pakai hanya `TextFormField()` karena data yang saya butuhkan hanya barupa input teks atau angka.
+4. Penerapan Clean Architecture pada aplikasi Flutter dapat membantu dalam mengorganisir kode kita dengan cara yang memisahkan logika bisnis dari detail implementasi dan infrastruktur. Clean Architecture memiliki beberapa lapisan utama, yaitu "Entity", "Use Case", "Interface Adapters", dan "Frameworks & Drivers".
+   Langkah-langkah menerapkan clean architecture:
+   - Tentukan entitas atau objek bisnis yang mewakili data atau model domain Anda.
+   - Implementasikan entitas ini sebagai plain Dart objects atau menggunakan kelas data (data class) di Flutter.
+   - Identifikasi use case atau fitur aplikasi yang mewakili tindakan tertentu dalam domain bisnis.
+   - Implementasikan use case ini sebagai kelas Dart yang terpisah, yang bertanggung jawab untuk logika bisnis dan berkomunikasi dengan entitas.
+   - Pisahkan antara logika bisnis (use case) dan detil implementasi seperti UI dan database.
+   - Buat kelas atau modul yang bertanggung jawab untuk mengonversi data dari format yang digunakan di dalam use case ke format yang sesuai untuk UI atau infrastruktur.
+   - Gunakan Presenter atau ViewModel untuk menghubungkan logika bisnis dengan tampilan (UI) di Flutter.
+   - Tempatkan seluruh kode yang berkaitan dengan kerangka kerja dan infrastruktur di lapisan framework & drivers.
+   - Implementasikan repository yang berkomunikasi dengan data sumber eksternal seperti database atau API.
+   - Gunakan widget Flutter dan fungsi framework untuk menghubungkan UI dengan presentasi.
+   - Gunakan teknik Dependency Injection untuk memasukkan dependensi ke dalam kelas-kelas kita. Di Flutter, kita bisa menggunakan package seperti get_it atau provider untuk mengelola dependensi.
+   - Pastikan setiap lapisan dapat diuji secara terpisah.
+   - Tulis unit test untuk setiap use case dan fungsi bisnis.
+   - Mock dependensi untuk mengisolasi setiap lapisan selama pengujian.
+5. - membuat left_drawer.dart yang berfungsi seperti navbar
+   - membuat shoplist_form.dart yang berisikan Class untuk membuat model saya.
+   - membuat form yang meminta input sesuai dengan model tersebut.
+   - membuat validasi pada input form
+   - membuat dialog window yang akan memunculkan apa yang sudah saya input
+   - mengatur semua navigasi buttonnya ke window yang dituju
+
 # Tugas 7
 1. Stateless widget berarti semua konfigurasi yang ada sudah diinisiasi di awal, sedangkan Stateful widget bersifat dinamis yang berarti widget dapat diganti atau diperbaharui kapan pun berdasarkan aksi atau saat terjadi perubahan data.
 2. - "MyApp": widget yang berfungsi sebagai widget utama aplikasi
