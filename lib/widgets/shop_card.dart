@@ -1,5 +1,7 @@
 import 'package:jastipin_aja/screens/shoplist_form.dart';
 import 'package:flutter/material.dart';
+import 'package:jastipin_aja/screens/menu.dart';
+import 'package:jastipin_aja/screens/list_product.dart';
 
 
 class ShopItem {
@@ -16,7 +18,6 @@ class ShopCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     Color buttonColor;
     if (item.name == "Lihat Item") {
       buttonColor = Colors.yellow;
@@ -38,10 +39,13 @@ class ShopCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
-
-          // Navigate ke route yang sesuai (tergantung jenis tombol)
           if (item.name == "Tambah Item") {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopFormPage()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ShopFormPage()));
+          }
+          else if (item.name == "Lihat Item") {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ProductPage()));
           }
         },
         child: Container(
