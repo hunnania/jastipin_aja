@@ -11,18 +11,16 @@ Kelas: PBP B<br>
    - Menampilkan data pada widget
 4. User akan diminta untuk menginput username dan passwordnya pada halaman login. Kemudian, input-an user tersebut akan dicek dengan mengirimkan ke method login pada Django. Lalu, jika username dan password sudah benar, user dapat mengakses halam lain yang ada pada aplikasi. Jika tidak sesuai, user akan diminta lagi untuk menginput username dan password.
 5. Berikut widget yang saya pakai dan fungsinya:<br>
-| Widget | Fungsi | 
-| ----- | ----- |
-| MaterialPageRoute | Mengarahkan routing ke halaman (widget) tertentu | 
-| Drawer | Membuat drawer navigator |
-| ListTile | Membuat list beberapa tile |
-| Scaffold | Mengatur layout dari widget yang ada di dalamnya |
-| AppBar | Menambahkan bar aplikasi yang berisi title dengan align left | 
-| Text | Berisi sebuah Text dengan properti di dalamnya |
-| Center | Mengatur layout widget di dalamnya agar centered |
-| Column | Mengatur layout widget di dalamnya agar turun ke bawah (tidak inline-flex) |
-| TextStyle | Mengatur style dari sebuah text |
-| Container | Menampung beberapa widget di dalamnya |
+MaterialPageRoute: Mengarahkan routing ke halaman (widget) tertentu<br>
+Drawer: Membuat drawer navigator<br>
+ListTile: Membuat list beberapa tile<br>
+Scaffold: Mengatur layout dari widget yang ada di dalamnya<br>
+AppBar: Menambahkan bar aplikasi yang berisi title dengan align left<br>
+Text: Berisi sebuah Text dengan properti di dalamnya<br>
+Center: Mengatur layout widget di dalamnya agar centered<br>
+Column: Mengatur layout widget di dalamnya agar turun ke bawah (tidak inline-flex)<br>
+TextStyle: Mengatur style dari sebuah text<br>
+Container: Menampung beberapa widget di dalamnya<br>
 
 7. - membuat app django baru bernama authentication
    - membuat fungsi login pada views.py di authentication
