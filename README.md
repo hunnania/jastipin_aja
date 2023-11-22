@@ -2,6 +2,34 @@ Nama: Alifa Hanania Ardha<br>
 NPM: 2206024392<br>
 Kelas: PBP B<br>
 
+# Tugas 9
+1. Ya, kita bisa mengambil data JSON tanpa membuat model terlebih dahulu, tetapi itu dapat terjadi kalau kita tidak melakukan mapping data. Akan tetapi, membuat model terlebih dahulu tentu akan lebih optimal agar kode kita mudah dibaca dan diketahui tipe datanya.
+2. CookieRequest dapat menghandle HTTPRequest dengan autentikasi berbasis cookie dan mengatur semua cookie untuk sesi user.
+3. - Mendapatkan data json dari web tugas sebelumnya dengan fetch data
+   - Membuat model Dart yang mencerminkan struktur data JSON agar dapat diakses Flutter.
+   - Menggunakan metode json.decode untuk mengurai string JSON menjadi objek Dart.
+   - Menampilkan data pada widget
+4. User akan diminta untuk menginput username dan passwordnya pada halaman login. Kemudian, input-an user tersebut akan dicek dengan mengirimkan ke method login pada Django. Lalu, jika username dan password sudah benar, user dapat mengakses halam lain yang ada pada aplikasi. Jika tidak sesuai, user akan diminta lagi untuk menginput username dan password.
+5. Berikut widget yang saya pakai dan fungsinya:
+| Widget | Fungsi | 
+| ----- | ----- |
+| MaterialPageRoute | Mengarahkan routing ke halaman (widget) tertentu | 
+| Drawer | Membuat drawer navigator |
+| ListTile | Membuat list beberapa tile |
+| Scaffold | Mengatur layout dari widget yang ada di dalamnya |
+| AppBar | Menambahkan bar aplikasi yang berisi title dengan align left | 
+| Text | Berisi sebuah Text dengan properti di dalamnya |
+| Center | Mengatur layout widget di dalamnya agar centered |
+| Column | Mengatur layout widget di dalamnya agar turun ke bawah (tidak inline-flex) |
+| TextStyle | Mengatur style dari sebuah text |
+| Container | Menampung beberapa widget di dalamnya |
+
+7. - membuat app django baru bernama authentication
+   - membuat fungsi login pada views.py di authentication
+   - Menginstall package pada proyek flutter dengan `flutter pub add provider` dan `flutter pub add pbp_django_auth`
+   - membuat page login untuk aplikasi Flutter
+   - membuat file `list_product.dart` untuk menampilkan semua item dalam card
+
 # Tugas 8
 1. `Navogator.push()` akan **menambahkan** route baru ke dalam route stack yang dikelola oleh Navigator, sedangkan `Navigator.pushReplacement()` akan **mengganti** route teratas pada route stack dengan route terbaru yang mau di-push ke stack tanpa mengubah kondisi elemen yang ada di bawahnya.
    Contoh penerapan `Navogator.push()` pada tugas sekarang ada pada `shop_card.dart` di mana ketika user menekan tombol "Tambah Item", route `ShopFormPage()` akan ditambahkan di atas stack dan menampilkan route `ShopFormPage()` dan dapat menekan tombol Back agar kembali ke halaman menu. Berikut potongan kodenya:
