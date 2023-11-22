@@ -10,7 +10,7 @@ Kelas: PBP B<br>
    - Menggunakan metode json.decode untuk mengurai string JSON menjadi objek Dart.
    - Menampilkan data pada widget
 4. User akan diminta untuk menginput username dan passwordnya pada halaman login. Kemudian, input-an user tersebut akan dicek dengan mengirimkan ke method login pada Django. Lalu, jika username dan password sudah benar, user dapat mengakses halam lain yang ada pada aplikasi. Jika tidak sesuai, user akan diminta lagi untuk menginput username dan password.
-5. Berikut widget yang saya pakai dan fungsinya:
+5. Berikut widget yang saya pakai dan fungsinya:<br>
 | Widget | Fungsi | 
 | ----- | ----- |
 | MaterialPageRoute | Mengarahkan routing ke halaman (widget) tertentu | 
